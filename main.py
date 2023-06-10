@@ -32,7 +32,7 @@ t = np.linspace(0, 10, 1000)  # 시간 범위 설정
 u = np.ones_like(t)  # 단위계단입력 생성
 
 # 응답곡선 계산
-t, y = signal.step((Hnum, Hden), T=t)
+t, y = signal.step((Gnum, Gden), T=t)
 
 # 응답곡선 그래프 그리기
 plt.plot(t, y)
@@ -74,8 +74,3 @@ plt.ylabel('Magnitude [dB]')
 plt.xlabel('Frequency [Hz]')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.pyplot()
-
-
-
-
-
